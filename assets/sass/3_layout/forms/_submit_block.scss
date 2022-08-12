@@ -1,0 +1,33 @@
+.submit-butt__ {
+    border-radius   : 46px;
+    color           : #fff;
+    border          : none;
+    justify-content : center;
+    height          : 46px;
+    width           : 100%;
+    cursor          : pointer;
+    font-size       : 13px;
+    transition      : 0.5s;
+    margin-bottom   : 0;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    outline         : none;
+    background-color: $color_1;
+
+
+    &.min-width__ {
+        margin: auto;
+        width : 260px;
+
+        @include xs {
+            width: 100%;
+        }
+    }
+
+
+    &:hover {
+        background-color: rgba($color_1, 0.9);
+    }
+
+}

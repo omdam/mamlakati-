@@ -1,0 +1,101 @@
+body {
+    font-size          : 18px;
+    font-family        : 'Almarai';
+    font-weight        : normal;
+    font-style         : normal;
+    line-height        : 1.8;
+    color              : $p_color_1;
+    background-color   : #fff;
+    background-image   : url(../images/header.svg);
+    background-repeat  : no-repeat;
+    background-position: top center;
+    background-size    : 100% auto;
+}
+
+.overflow-body {
+    overflow: hidden;
+
+}
+
+p {
+    font-size: 18px;
+    color    : $p_color_1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $h_color_1;
+}
+
+.list-unstyled {
+    margin-bottom: 0;
+}
+
+
+
+
+.section-wraper__ {
+    padding         : 20px;
+    background-color: #fff;
+}
+
+svg {
+    max-width: 100%;
+}
+
+@media (min-width: 1200px) {
+
+    .container {
+        max-width: 1200px;
+    }
+}
+
+.page-head {
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+
+    &.xs-head {
+        display: none;
+    }
+
+    @include md {
+        &.xs-head {
+            display: block;
+        }
+
+        .info-half & {
+            display: none;
+        }
+    }
+}
+
+.page-title {
+    font-size  : 30px;
+    font-weight: 800;
+    color      : $text;
+    margin     : 0;
+
+    @include xs {
+        width     : 100%;
+        text-align: center;
+        font-size : 24px;
+    }
+}
+
+.page-subtitle {
+    display    : block;
+    color      : #aea5a5;
+    font-size  : 16px;
+    font-weight: 700;
+    margin-top : 28px;
+}
+
+.page-content {
+    padding-top   : 225px;
+    padding-bottom: 100px;
+}

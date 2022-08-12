@@ -1,0 +1,249 @@
+.home_intro__ {
+    padding-top: 260px;
+
+    @include sm {
+        padding-top: 150px;
+    }
+
+    .intro_main_head {
+        font-size    : 35px;
+        color        : $h_color_1;
+        margin-top   : 0;
+        margin-bottom: 17px;
+        font-weight  : 800;
+
+        @include sm {
+            text-align: center;
+        }
+    }
+
+    .intro_main_parg__ {
+        font-size    : 17px;
+        margin-bottom: 49px;
+
+        @include sm {
+            text-align   : center;
+            margin-bottom: 20px;
+        }
+    }
+
+    .quick_search__ {
+        .head__ {
+            font-size    : 15px;
+            color        : $color_1;
+            display      : flex;
+            align-items  : center;
+            font-weight  : bold;
+            margin-bottom: 21px;
+
+            &::before {
+                content          : url(../images/search.svg);
+                margin-inline-end: 12px;
+                margin-top       : 3px;
+            }
+        }
+
+        .input_group__ {
+            margin-bottom: 14px;
+        }
+
+        .submit-butt__ {
+            margin-top: 25px;
+        }
+    }
+}
+
+// map 
+.suadi_map__ {
+    svg {
+        height: auto;
+
+        path {
+
+            &:hover,
+            &.active {
+                cursor: pointer;
+                fill  : $color_1;
+            }
+        }
+    }
+}
+
+.map_area_details__ {
+    display        : flex;
+    justify-content: center;
+    flex-direction : column;
+    text-align     : center;
+    height         : 100%;
+
+    @include sm {
+        margin-top   : 30px;
+        margin-bottom: 30px;
+        height       : auto;
+    }
+
+    .head__ {
+        font-size    : 17px;
+        color        : $h_color_1;
+        font-weight  : bold;
+        margin-bottom: 5px;
+    }
+
+    .nums_of_cities__ {
+        display      : block;
+        line-height  : 1;
+        font-size    : 14px;
+        color        : #6F6F6F;
+        font-weight  : bold;
+        margin-bottom: 11px;
+    }
+
+    .link_button__ {
+        height          : 38px;
+        min-width       : 138px;
+        font-size       : 12px;
+        margin          : 0 auto;
+        color           : $color_1;
+        background-color: rgba($color_1, 0.12);
+
+        &:hover {
+            background-color: $color_1;
+            color           : #fff;
+        }
+    }
+}
+
+.home_suadi_regions__ {
+    padding: 70px 0;
+
+}
+
+.home_activites__ {
+    padding-bottom: 115px;
+    overflow      : hidden;
+
+    .head__ {
+        color        : $h_color_1;
+        font-size    : 28px;
+        font-weight  : 800;
+        width        : 80%;
+        margin-top   : 80px;
+        margin-bottom: 13px;
+
+        @include sm {
+            margin-top: 0;
+            width     : 100%;
+            text-align: center;
+        }
+    }
+
+    .parg__ {
+        font-size    : 17px;
+        font-weight  : bold;
+        color        : $p_color_1;
+        width        : 60%;
+        margin-bottom: 40px;
+
+        @include sm {
+            width     : 100%;
+            text-align: center;
+        }
+    }
+
+    .link_button__ {
+        @include sm {
+            margin: 0 auto;
+        }
+    }
+
+    .figure__ {
+        padding-bottom: 67.2%;
+        position      : relative;
+
+        @include sm {
+            margin-top: 50px;
+        }
+
+        &::before {
+            content  : url(../images/activites_back.png);
+            position : absolute;
+            top      : 50%;
+            left     : 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        img {
+            object-fit: contain;
+        }
+    }
+}
+
+.home_about_us__ {
+    margin-bottom: 100px;
+
+
+    @include sm {
+        margin-bottom: 50px;
+    }
+
+    .main_head___ {
+        margin-bottom: 30px;
+    }
+
+    .figure__ {
+        padding-bottom: 153%;
+        width         : 351.98px;
+
+        @include sm {
+            width: 100%;
+        }
+
+        img {
+            object-fit: contain;
+        }
+    }
+
+    .head__ {
+        font-size    : 28px;
+        color        : $h_color_1;
+        margin-bottom: 20px;
+        font-weight  : 800;
+        margin-top   : 120px;
+
+
+        @include sm {
+            margin-top: 30px;
+            text-align: center;
+        }
+    }
+
+    .sub_title__ {
+        font-size    : 17px;
+        margin-bottom: 35px;
+        color        : #AEA5A5;
+
+        @include sm {
+            text-align: center;
+        }
+    }
+
+    .parg__ {
+        font-size    : 16px;
+        color        : $h_color_1;
+        margin-bottom: 0;
+
+
+        @include sm {
+            text-align: center;
+        }
+    }
+
+    .content___ {
+        padding-inline-start: 50px;
+
+        @include sm {
+            padding-inline-start: 0;
+        }
+    }
+}

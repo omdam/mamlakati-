@@ -1,0 +1,189 @@
+.footer__ {
+    padding-top     : 160px;
+    background-color: $color_1;
+    clip-path       : polygon(0 0, 100% 14%, 100% 100%, 0 100%);
+    background-image: url(../images/footer.png);
+
+    @include sm {
+        clip-path  : polygon(0 0, 100% 4%, 100% 100%, 0 100%);
+        padding-top: 70px;
+    }
+
+    .footer_block__ {
+        @include sm {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.footer_head__ {
+    color        : #fff;
+    font-size    : 17px;
+    font-weight  : bold;
+    margin-bottom: 35px;
+    margin-top   : 0;
+
+    @include sm {
+        text-align   : center;
+        margin-bottom: 20px;
+    }
+}
+
+.footer_parg__ {
+    color    : #fff;
+    font-size: 13px;
+    margin   : 0;
+
+    @include sm {
+        text-align: center;
+
+    }
+}
+
+.footer_list__ {
+    margin             : 0;
+    margin-inline-start: 30px;
+
+    .li__ {
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+
+    a {
+        font-size  : 17px;
+        color      : #fff;
+        transition : 0.5s;
+        display    : flex;
+        align-items: center;
+        width      : max-content;
+
+        @include sm {
+
+            margin-right: auto;
+            margin-left : auto;
+        }
+
+        &::before {
+            content            : "";
+            display            : inline-block;
+            width              : 14px;
+            height             : 14px;
+            border             : 2px solid rgba(#fff, 0.7);
+            border-radius      : 50%;
+            margin-inline-end  : 10px;
+            border-bottom-color: transparent;
+            border-left-color  : transparent;
+            transition         : 0.5s;
+        }
+
+        &:hover {
+            color          : $color_2;
+            text-decoration: none;
+
+            &::before {
+                transform          : rotate(-180deg);
+                border-color       : $color_2;
+                border-bottom-color: transparent;
+                border-left-color  : transparent;
+            }
+        }
+    }
+}
+
+.footer_contact__ {
+    margin-bottom: 30px;
+
+    .li__ {
+        &:not(:last-child) {
+            margin-bottom: 15px;
+
+            @include sm {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .link__ {
+        font-size  : 17px;
+        color      : #fff;
+        display    : flex;
+        align-items: center;
+        width      : max-content;
+
+        @include sm {
+            margin-left : auto;
+            margin-right: auto;
+
+        }
+
+        i,
+        svg {
+            margin-inline-end: 10px;
+            color            : rgba(#fff, 0.7);
+            font-size        : 20px;
+            min-width        : 20px;
+            display          : inline-block;
+            transition       : 0.5s;
+        }
+
+        &:hover {
+            color: $color_2;
+
+            i,
+            svg {
+                color: $color_2;
+            }
+        }
+    }
+}
+
+.footer_socials__ {
+    display    : flex;
+    align-items: center;
+
+    @include sm {
+        justify-content: center;
+    }
+
+    .li__ {
+        &:not(:last-child) {
+            margin-inline-end: 5px;
+        }
+    }
+
+    .link__ {
+        color          : #fff;
+        transition     : 0.5s;
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+        height         : 66px;
+        width          : 36px;
+        border         : 1px solid #fff;
+        border-radius  : 10px;
+
+        &:hover {
+            background-color: $color_2;
+            border-color    : $color_2;
+
+        }
+    }
+}
+
+.copyrights__ {
+    background-color       : #fff;
+    text-align             : center;
+    max-width              : 444px;
+    margin                 : 0 auto;
+    padding                : 10px;
+    margin-top             : 35px;
+    font-size              : 14px;
+    color                  : #373636;
+    border-top-left-radius : 13px;
+    border-top-right-radius: 13px;
+
+    @include sm {
+        margin-top: 0;
+    }
+}

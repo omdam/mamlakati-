@@ -1,0 +1,98 @@
+.regoin_block__ {
+    display        : block;
+    text-decoration: none;
+    margin-bottom  : 30px;
+
+    .figure__ {
+        padding-bottom: 70%;
+
+        img {
+            object-fit: contain;
+            max-width : 100%;
+            max-height: 100%;
+            width     : auto;
+            height    : auto;
+            top       : 50%;
+            left      : 50%;
+            transform : translate(-50%, -50%);
+            right     : unset;
+            bottom    : unset;
+        }
+    }
+
+
+    .region_title_cities_num__ {
+        background-color: #fff;
+        display         : flex;
+        align-items     : center;
+        justify-content : space-between;
+        padding         : 20px 22px;
+        border-radius   : 27px;
+        box-shadow      : 0 0 20px rgba(#B0B0B0, 0.15);
+        transition      : 0.5s;
+
+        .title__ {
+            transition : 0.5s;
+            margin     : 0;
+            font-size  : 17px;
+            font-weight: bold;
+            color      : $h_color_1;
+
+        }
+
+        .cities_num__ {
+            display         : flex;
+            align-items     : center;
+            justify-content : center;
+            height          : 33px;
+            padding         : 3px 18px;
+            color           : $color_1;
+            font-size       : 13px;
+            font-weight     : bold;
+            background-color: rgba($color_1, 0.07);
+            border-radius   : 33px;
+
+            .num__ {
+                font-size        : 17px;
+                margin-inline-end: 5px;
+            }
+
+            &::after {
+                content            : url(../images/arrow.svg);
+                margin-inline-start: -13px;
+                transform          : scale(0) translateX(10px);
+                transition         : 0.5s;
+
+            }
+        }
+    }
+
+    &:hover {
+        text-decoration: none;
+
+
+        .figure__ {
+            img {
+                transform: translate(-50%, -50%) scale(1.1);
+            }
+        }
+
+        .region_title_cities_num__ {
+            background-color: $color_1;
+
+            .title__ {
+                color: #fff;
+            }
+
+            .cities_num__ {
+                color           : #fff;
+                background-color: rgba(#fff, 0.15);
+
+                &::after {
+                    transform          : scale(1);
+                    margin-inline-start: 10px;
+                }
+            }
+        }
+    }
+}

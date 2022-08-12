@@ -1,0 +1,65 @@
+// swiper slider
+.swiper-button-next,
+.swiper-button-prev {
+    width           : 22px;
+    height          : 67px;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    background-color: rgba($color_2, 0.2);
+    transition      : 0.5s;
+    top             : 50%;
+    transform       : translateY(-50%);
+    margin          : 0;
+    border-radius: 5px;
+
+    &.swiper-button-disabled {
+        // opacity: 1;
+    }
+
+    &::after {
+        color           : $color_2;
+        font-size       : 12px;
+        font-weight     : bold;
+        transition      : 0.5s;
+        // @include dir {
+        //     transform: rotate(180deg);
+        // }
+    }
+
+    &:hover {
+        background-color: $color_2;
+
+        &::after {
+            color: #fff;
+        }
+    }
+}
+
+
+
+// swiper-pagination
+.swiper-pagination {
+    position       : static;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    margin-top     : 20px;
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet {
+    width           : 20px;
+    height          : 4px;
+    margin          : 0 5px;
+    border-radius   : 2px;
+    background-color: rgba(136, 182, 242, 0.5);
+    opacity         : 1;
+
+    &.swiper-pagination-bullet-active {
+        // background-color   : $color_1;
+        background-color: $color_2;
+        // width           : 20px;
+    }
+}
+
+// ###################################################################

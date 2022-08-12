@@ -1,0 +1,42 @@
+// abstracts or helpers
+@import '1_abstracts/variables';
+@import '1_abstracts/functions';
+@import '1_abstracts/mixins';
+
+// base
+// @import 'base/normalize';
+@import '2_base/fonts';
+@import '2_base/base';
+@import '2_base/links';
+@import '2_base/buttons';
+@import '2_base/overlay';
+@import '2_base/selection_color';
+@import '2_base/scroll_bar';
+@import '2_base/lazy_load';
+@import '2_base/image_block';
+@import '2_base/close_button';
+@import '2_base/dropdown';
+@import '2_base/wraper_block';
+@import '2_base/modal_section';
+@import '2_base/tabs_block';
+
+
+// 3_layout
+@import '3_layout/header';
+@import '3_layout/footer';
+@import '3_layout/forms';
+@import '3_layout/sliders';
+
+
+//4_components
+@import '4_components/link_button';
+@import '4_components/main_heading';
+@import '4_components/regoin_block';
+@import '4_components/register_modal';
+
+
+// 5_pages
+@import '5_pages/_home';
+@import '5_pages/_single';
+@import '5_pages/_list';
+@import '5_pages/_exam';

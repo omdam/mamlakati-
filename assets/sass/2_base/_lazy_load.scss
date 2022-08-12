@@ -1,0 +1,25 @@
+/*loading*/
+
+
+/*lazyload*/
+
+.loading__d {
+    background-color: #fafafa !important;
+    position        : relative;
+    overflow        : hidden;
+
+    img {
+        opacity: 0 !important;
+        filter : blur(40px);
+    }
+
+}
+
+.loaded__d {
+
+    // background-color: transparent !important;
+    img {
+        opacity: 1;
+        filter : blur(0);
+    }
+}

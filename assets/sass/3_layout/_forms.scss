@@ -1,0 +1,81 @@
+@import 'forms/submit_block';
+@import 'forms/select_block';
+
+
+.input__ {
+    height          : 46px;
+    border-radius   : 46px;
+    border          : solid 1px #F1F1F1;
+    background-color: #F1F1F1;
+    outline         : none;
+    width           : 100%;
+    font-size       : 13px;
+    color           : $h_color_1;
+    padding         : 13px 30px;
+    transition      : 0.5s;
+    display         : flex;
+    align-items     : center;
+    margin-bottom   : 0;
+
+    &:focus,
+    &:hover {
+        border-color: $color_2;
+    }
+
+    &::placeholder {
+        color: #6F6F6F;
+    }
+
+}
+
+.textarea__ {
+    height: 376px;
+}
+
+.input_group__ {
+    margin-bottom: 10px;
+}
+
+.password_group__ {
+    position: relative;
+
+    .toggle_password_appearence {
+        position        : absolute;
+        top             : 50%;
+        padding         : 0;
+        outline         : none;
+        transform       : translateY(-50%);
+        right           : 30px;
+        background-color: transparent;
+        border          : none;
+        cursor          : pointer;
+        color           : #6F6F6F;
+
+        @include dir {
+            right: unset;
+            left : 30px;
+        }
+
+        &:hover,
+        &.active__ {
+            color: $color_2;
+        }
+    }
+}
+
+.confirmation_code_group_ {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+
+    .input__ {
+        width     : 58px;
+        height    : 46px;
+        padding   : 0;
+        text-align: center;
+
+        &:not(:last-child) {
+            margin-inline-end: 15px;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+.tabs-block-group__ {}
+
+.tab-block__ {
+
+    display: none;
+
+    &.active__ {
+        display: block;
+    }
+}

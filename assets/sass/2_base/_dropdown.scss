@@ -1,0 +1,85 @@
+// dropdown menue
+.dropdown__ {
+    position: relative;
+
+    >a,
+    .butt__ {
+        position   : relative;
+        display    : flex;
+        align-items: center;
+    }
+
+    .sub-menu__ {
+        list-style      : none;
+        margin-bottom   : 0;
+        margin-top      : 0;
+        display         : table;
+        position        : absolute;
+        top             : 115%;
+        left            : 50%;
+        transform       : translateX(-50%);
+        background-color: $color_1;
+        z-index         : -1;
+        min-width       : 102px;
+        box-shadow      : 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        padding         : 5px 0;
+        border          : none;
+        transform-origin: center 0;
+        transition      : 0.5s;
+        visibility      : hidden;
+        opacity         : 0;
+        transition      : 0.5s;
+
+
+
+
+        &::before {
+            content     : "";
+            display     : block;
+            position    : absolute;
+            bottom      : 100%;
+            border-style: solid;
+            border-width: 0px 6px 6px 6px;
+            border-color: $color_1 transparent;
+            left        : 50%;
+            transform   : translateX(-50%);
+        }
+
+        li {
+
+            // margin: 0 8px;
+            &:not(:last-child) {
+                border-bottom: 1px solid $color_2;
+            }
+
+            a {
+                font-size      : 14px;
+                font-weight    : 500;
+                display        : block;
+                text-decoration: none;
+                text-transform : capitalize;
+                transition     : 0.5s;
+                color          : #fff;
+                padding        : 5px 15px;
+                text-align     : center;
+
+                &:hover {
+                    background-color: $color_2;
+                }
+
+
+            }
+        }
+
+
+
+    }
+
+    &:hover {
+        .sub-menu__ {
+            visibility: visible;
+            opacity   : 1;
+            z-index   : 11;
+        }
+    }
+}

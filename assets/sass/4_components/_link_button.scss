@@ -1,0 +1,22 @@
+.link_button__ {
+    min-width       : 168px;
+    height          : 46px;
+    background-color: $color_1;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    color           : #fff;
+    border-radius   : 46px;
+    transition      : 0.5s;
+    width           : max-content;
+    padding         : 0 10px;
+    font-size       : 15px;
+
+    &:hover {
+        background-color: rgba($color_1, 0.8);
+        color           : #fff;
+        text-decoration : none;
+    }
+
+
+}

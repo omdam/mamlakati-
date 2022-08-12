@@ -1,0 +1,236 @@
+// nav__ -large sizes
+.nav__ {
+
+    .close-butt__,
+    .nav-logo__,
+    .header-reserv-link__,
+    .toolbar-lang-block__,
+    .social__ {
+        display: none;
+    }
+
+    .nav-list__ {
+        display      : flex;
+        margin-bottom: 0;
+
+        >li {
+            &:not(:last-child) {
+                margin-inline-end: 29px;
+
+                @include md {
+                    margin-inline-end: 0;
+                }
+            }
+
+            >a {
+                font-size      : 15px;
+                font-weight    : bold;
+                font-style     : normal;
+                color          : $p_color_2;
+                display        : flex;
+                align-items    : center;
+                text-transform : capitalize;
+                text-decoration: none;
+                transition     : 0.5s;
+                padding        : 9px 0;
+                position       : relative;
+
+                &::after {
+                    content         : "";
+                    background-color: rgba($color_1, 0.5);
+                    height          : 2px;
+                    width           : 100%;
+                    position        : absolute;
+                    bottom          : 0;
+                    left            : 0;
+                    width           : 0;
+                    transition      : 0.5s;
+
+                    @include dir {
+                        left : unset;
+                        right: 0;
+                    }
+
+                    @include sm {
+                        display: none;
+                    }
+                }
+
+
+                &::before {
+                    content            : "";
+                    background-color   : #fff;
+                    width              : 14px;
+                    width              : 14px;
+                    height             : 14px;
+                    border             : 2px solid rgba($color_1, 0.5);
+                    position           : absolute;
+                    bottom             : -6px;
+                    right              : 0;
+                    z-index            : 1;
+                    border-radius      : 50%;
+                    border-left-color  : #fff;
+                    border-bottom-color: #fff;
+                    transform          : scale(0) rotateZ(180deg);
+                    transition         : 0.5s;
+
+                    @include dir {
+                        right: unset;
+                        left : 0;
+                    }
+
+                    @include sm {
+                        display: none;
+                    }
+                }
+
+
+
+                &:hover,
+                &.active {
+                    color: $color_1;
+
+                    &::after {
+                        width: 100%;
+                    }
+
+                    &::before {
+                        transform: scale(1) rotateZ(0);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// nav__  sm - xs size
+@include sm {
+    .nav__ {
+        position        : fixed;
+        top             : 0;
+        left            : -100%;
+        height          : 100%;
+        width           : 80%;
+        z-index         : 1111;
+        padding         : 20px;
+        transition      : 0.5s;
+        overflow-y      : auto;
+        display         : block;
+        padding-top     : 90px;
+        background-color: $color_1;
+
+
+        .toolbar-lang-block__ {
+            display : inline-flex;
+            position: absolute;
+            top     : 20px;
+            left    : 20px;
+
+            @include dir {
+                left : unset;
+                right: 20px;
+            }
+        }
+
+        .header-reserv-link__ {
+            display      : flex;
+            background   : rgba($color_2, 0.2);
+            border-radius: 0;
+            margin-bottom: 20px;
+        }
+
+        .nav-logo__ {
+            display        : flex;
+            align-items    : center;
+            justify-content: center;
+            margin-bottom  : 40px;
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        .social__ {
+            display        : flex;
+            justify-content: center;
+            margin-bottom  : 20px;
+
+            .link__ {
+                svg {
+                    width : 20px;
+                    height: 20px;
+                }
+            }
+        }
+
+        .close-butt__ {
+            display: block;
+        }
+
+        .bavbar-logo__ {
+            display        : flex;
+            max-width      : 100%;
+            justify-content: center;
+            margin-bottom  : 50px;
+            filter         : brightness(0) invert(1);
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        @include dir {
+            right: -100%;
+            left : unset;
+        }
+
+        &.active-menu {
+            left: 0;
+
+            @include dir {
+                right: 0;
+                left : unset;
+            }
+        }
+
+        .nav-list__ {
+            display: block;
+            order  : 3;
+            width  : 100%;
+            margin : 0;
+
+            @include dir {
+                margin: 0;
+            }
+
+            >li {
+                margin-inline-end: 0;
+
+                &:not(:last-child) {
+                    margin-inline-end: 0;
+                }
+
+                >a {
+                    color  : #fff !important;
+                    padding: 10px 25px;
+                    display: block;
+                    margin : 0;
+
+                    @include dir {
+                        margin: 0;
+                    }
+
+                    &:hover {
+                        background-color: transparent;
+                    }
+                }
+
+                &:nth-child(odd) {
+                    >a {
+                        background-color: rgba(#fff, 0.08);
+                    }
+                }
+            }
+        }
+    }
+}
